@@ -1,0 +1,6 @@
+[submodule "gmmlib"]
+	path = gmmlib
+	url = https://github.com/intel/gmmlib
+[submodule "libva"]
+	path = libva
+	url = https://github.com/intel/libva
