@@ -4,3 +4,4 @@
 [submodule "libva"]
 	path = libva
 	url = https://github.com/intel/libva
+	branch = v2.8-branch
