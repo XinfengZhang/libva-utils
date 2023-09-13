@@ -61,7 +61,7 @@ TEST_P(VAAPIGetCreateConfig, CreateConfigWithAttributes)
 {
     const VAStatus expectedStatus = getSupportStatus(profile, entrypoint);
 
-    if (VA_STATUS_SUCCESS != expectedStatus) {
+    if (VA_STATUS_SUCCESS != expectedStatus && VAEntrypointEncSliceLP != entrypoint) {
         createConfig(profile, entrypoint, ConfigAttributes(), expectedStatus);
         destroyConfig(VA_STATUS_ERROR_INVALID_CONFIG);
         return;
@@ -126,7 +126,7 @@ TEST_P(VAAPIGetCreateConfig, CreateConfigNoAttributes)
 {
     const VAStatus expectedStatus = getSupportStatus(profile, entrypoint);
 
-    if (VA_STATUS_SUCCESS != expectedStatus) {
+    if (VA_STATUS_SUCCESS != expectedStatus && VAEntrypointEncSliceLP != entrypoint) {
         createConfig(profile, entrypoint, ConfigAttributes(), expectedStatus);
         destroyConfig(VA_STATUS_ERROR_INVALID_CONFIG);
         return;
